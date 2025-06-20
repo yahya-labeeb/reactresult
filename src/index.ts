@@ -3,12 +3,18 @@ import mysql from 'mysql2';
 import  express  from 'express';
 import cors from 'cors'
 // Create the connection to database
-const port=3000
+const port=process.env.PORT || 3000
 const app=express()
-app.use(cors({
-   // origin:"http://localhost:5173"
-  origin: 'https://student-exam-qzkl.vercel.app'
- }))
+app.use(cors())
+
+ /* app.use(cors(
+    {
+        origin: ["https://deploy-mern-frontend.vercel.app"],
+        methods: ["POST", "GET"],
+        credentials: true
+    } */
+
+    
 app.use(express.json())
  //app.use("/styles", express.static(__dirname + '/styles'));
 /* const db =  mysql.createConnection({
@@ -36,10 +42,14 @@ const db =  mysql.createPool({
 
 
 
-
+app.get('/',(req,res)=>{
+   
+      res.json('weldone')
+    
+    }) 
 
 //Get all
-app.get('/',(req,res)=>{
+app.get('/all',(req,res)=>{
     db.query('select * from test', async(err,result)=>{
      if(err){
         console.log(err)
