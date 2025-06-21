@@ -81,3 +81,4 @@ app.listen(port,()=>{
     console.log("running on por " +port)
  })
 
+export default app

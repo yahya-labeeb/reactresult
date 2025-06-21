@@ -73,3 +73,4 @@ app.get('/:id', (req, res) => {
 app.listen(port, () => {
     console.log("running on por " + port);
 });
+exports.default = app;
