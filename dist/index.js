@@ -13,7 +13,7 @@ const app = (0, express_1.default)();
 app.use((0, cors_1.default)());
 /* app.use(cors(
    {
-       origin: ["https://deploy-mern-frontend.vercel.app"],
+       origin: ["https://student-exam-chi.vercel.app/"],
        methods: ["POST", "GET"],
        credentials: true
    } */
