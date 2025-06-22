@@ -5,14 +5,14 @@ import cors from 'cors'
 // Create the connection to database
 const port=process.env.PORT || 3000
 const app=express()
-app.use(cors())
+ /*app.use(cors())*/
 
- /* app.use(cors(
+ app.use(cors(
     {
         origin: ["https://student-exam-chi.vercel.app/"],
         methods: ["POST", "GET"],
         credentials: true
-    } */
+    } 
 
     
 app.use(express.json())
