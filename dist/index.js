@@ -10,13 +10,13 @@ const cors_1 = __importDefault(require("cors"));
 // Create the connection to database
 const port = process.env.PORT || 3000;
 const app = (0, express_1.default)();
-/*app.use((0, cors_1.default)());*/
- app.use(cors(
+app.use((0, cors_1.default)());
+/* app.use(cors(
    {
-       origin: ["https://student-exam-chi.vercel.app/"],
+       origin: ["https://deploy-mern-frontend.vercel.app"],
        methods: ["POST", "GET"],
        credentials: true
-   } 
+   } */
 app.use(express_1.default.json());
 //app.use("/styles", express.static(__dirname + '/styles'));
 /* const db =  mysql.createConnection({
